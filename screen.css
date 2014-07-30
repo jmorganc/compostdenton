@@ -1,0 +1,16 @@
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+div#map {
+    padding: 0px;
+    margin: 0px;
+    height: 500px;
+    border: 1px solid #555;
+}
