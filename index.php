@@ -2,14 +2,14 @@
 <html>
     <head>
         <meta charset=utf-8 />
-        <title>Mapbox Map</title>
+        <title>Compost Denton Map</title>
         <link rel="stylesheet" href="screen.css" />
         <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
         <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
     </head>
     <body>
-        <h1>Mapbox</h1>
+        <h1>Compost Denton</h1>
         <div id='map'></div>
 
         <script>
