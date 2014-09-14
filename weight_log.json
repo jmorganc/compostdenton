@@ -1,0 +1,427 @@
+[
+	{
+		"totalWeight" : 8.399999999999999,
+		"weightLog" : [
+			{
+				"weight" : 2.65,
+				"date" : ISODate("2014-08-17T18:49:12.494Z"),
+				"_id" : ObjectId("53f0f92844aa1b4207970594")
+			},
+			{
+				"weight" : 2.95,
+				"date" : ISODate("2014-08-24T17:50:58.332Z"),
+				"_id" : ObjectId("53fa26022c48f3e96786fa6f")
+			},
+			{
+				"weight" : 2.8,
+				"date" : ISODate("2014-08-31T17:11:36.326Z"),
+				"_id" : ObjectId("540357482c48f3e96786fa7e")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.141212,
+				33.212339
+			]
+		}
+	},
+	{
+		"totalWeight" : 37.9,
+		"weightLog" : [
+			{
+				"weight" : 16.15,
+				"date" : ISODate("2014-08-17T19:16:44.808Z"),
+				"_id" : ObjectId("53f0ff9c44aa1b4207970596")
+			},
+			{
+				"weight" : 8.5,
+				"date" : ISODate("2014-08-24T19:15:54.359Z"),
+				"_id" : ObjectId("53fa39ea2c48f3e96786fa75")
+			},
+			{
+				"weight" : 13.25,
+				"date" : ISODate("2014-08-31T19:24:53.152Z"),
+				"_id" : ObjectId("540376852c48f3e96786fa88")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.112618,
+				33.231637
+			]
+		}
+	},
+	{
+		"totalWeight" : 29.549999999999997,
+		"weightLog" : [
+			{
+				"weight" : 9.5,
+				"date" : ISODate("2014-08-17T19:25:41.161Z"),
+				"_id" : ObjectId("53f101b544aa1b4207970597")
+			},
+			{
+				"weight" : 12.2,
+				"date" : ISODate("2014-08-24T18:51:54.942Z"),
+				"_id" : ObjectId("53fa344a2c48f3e96786fa74")
+			},
+			{
+				"weight" : 7.85,
+				"date" : ISODate("2014-08-31T19:18:22.322Z"),
+				"_id" : ObjectId("540374fe2c48f3e96786fa87")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.108873,
+				33.236894
+			]
+		}
+	},
+	{
+		"totalWeight" : 22.6,
+		"weightLog" : [
+			{
+				"weight" : 6.75,
+				"date" : ISODate("2014-08-17T19:01:14.409Z"),
+				"_id" : ObjectId("53f0fbfa44aa1b4207970595")
+			},
+			{
+				"weight" : 6.25,
+				"date" : ISODate("2014-08-24T18:01:03.749Z"),
+				"_id" : ObjectId("53fa285f2c48f3e96786fa70")
+			},
+			{
+				"weight" : 9.6,
+				"date" : ISODate("2014-08-31T17:34:27.216Z"),
+				"_id" : ObjectId("54035ca32c48f3e96786fa80")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.14132219999999,
+				33.2167226
+			]
+		}
+	},
+	{
+		"totalWeight" : 19.549999999999997,
+		"weightLog" : [
+			{
+				"weight" : 11.2,
+				"date" : ISODate("2014-08-24T17:17:52.793Z"),
+				"_id" : ObjectId("53fa1e402c48f3e96786fa6d")
+			},
+			{
+				"weight" : 8.35,
+				"date" : ISODate("2014-08-31T16:11:47.071Z"),
+				"_id" : ObjectId("540349432c48f3e96786fa7a")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.116641,
+				33.183357
+			]
+		}
+	},
+	{
+		"totalWeight" : 23.45,
+		"weightLog" : [
+			{
+				"weight" : 15.1,
+				"date" : ISODate("2014-08-24T17:01:53.914Z"),
+				"_id" : ObjectId("53fa1a812c48f3e96786fa6b")
+			},
+			{
+				"weight" : 8.35,
+				"date" : ISODate("2014-08-31T16:42:02.531Z"),
+				"_id" : ObjectId("5403505a2c48f3e96786fa7c")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.132377,
+				33.165097
+			]
+		}
+	},
+	{
+		"totalWeight" : 10.55,
+		"weightLog" : [
+			{
+				"weight" : 7,
+				"date" : ISODate("2014-08-24T16:24:53.152Z"),
+				"_id" : ObjectId("53fa11d52c48f3e96786fa6a")
+			},
+			{
+				"weight" : 3.55,
+				"date" : ISODate("2014-08-31T19:40:42.526Z"),
+				"_id" : ObjectId("54037a3a2c48f3e96786fa89")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.1355449,
+				33.244691
+			]
+		}
+	},
+	{
+		"totalWeight" : 4.1,
+		"weightLog" : [
+			{
+				"weight" : 4.1,
+				"date" : ISODate("2014-08-24T18:43:43.722Z"),
+				"_id" : ObjectId("53fa325f2c48f3e96786fa73")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.098493,
+				33.240531
+			]
+		}
+	},
+	{
+		"totalWeight" : 12.85,
+		"weightLog" : [
+			{
+				"weight" : 8.75,
+				"date" : ISODate("2014-08-24T17:10:43.283Z"),
+				"_id" : ObjectId("53fa1c932c48f3e96786fa6c")
+			},
+			{
+				"weight" : 4.1,
+				"date" : ISODate("2014-08-31T16:03:58.135Z"),
+				"_id" : ObjectId("5403476e2c48f3e96786fa79")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.123516,
+				33.185812
+			]
+		}
+	},
+	{
+		"totalWeight" : 10.95,
+		"weightLog" : [
+			{
+				"weight" : 10.95,
+				"date" : ISODate("2014-08-31T18:39:41.726Z"),
+				"_id" : ObjectId("54036bed2c48f3e96786fa85")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.169912,
+				33.247209
+			]
+		}
+	},
+	{
+		"totalWeight" : 7.85,
+		"weightLog" : [
+			{
+				"weight" : 7.85,
+				"date" : ISODate("2014-08-31T19:00:54.685Z"),
+				"_id" : ObjectId("540370e62c48f3e96786fa86")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.057698,
+				33.2205439
+			]
+		}
+	},
+	{
+		"totalWeight" : 18.95,
+		"weightLog" : [
+			{
+				"weight" : 7.25,
+				"date" : ISODate("2014-08-24T18:26:43.634Z"),
+				"_id" : ObjectId("53fa2e632c48f3e96786fa72")
+			},
+			{
+				"weight" : 11.7,
+				"date" : ISODate("2014-08-31T18:28:38.819Z"),
+				"_id" : ObjectId("540369562c48f3e96786fa84")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.14794099999999,
+				33.232306
+			]
+		}
+	},
+	{
+		"totalWeight" : 15.85,
+		"weightLog" : [
+			{
+				"weight" : 5.15,
+				"date" : ISODate("2014-08-24T18:18:39.045Z"),
+				"_id" : ObjectId("53fa2c7f2c48f3e96786fa71")
+			},
+			{
+				"weight" : 10.7,
+				"date" : ISODate("2014-08-31T18:22:32.881Z"),
+				"_id" : ObjectId("540367e82c48f3e96786fa83")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.1534999,
+				33.226992
+			]
+		}
+	},
+	{
+		"totalWeight" : 5.3,
+		"weightLog" : [
+			{
+				"weight" : 5.3,
+				"date" : ISODate("2014-08-31T17:45:13.730Z"),
+				"_id" : ObjectId("54035f292c48f3e96786fa81")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.1463886,
+				33.2180344
+			]
+		}
+	},
+	{
+		"totalWeight" : 12.8,
+		"weightLog" : [
+			{
+				"weight" : 6.15,
+				"date" : ISODate("2014-08-24T17:34:30.119Z"),
+				"_id" : ObjectId("53fa22262c48f3e96786fa6e")
+			},
+			{
+				"weight" : 6.65,
+				"date" : ISODate("2014-08-31T16:28:24.573Z"),
+				"_id" : ObjectId("54034d282c48f3e96786fa7b")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.14267,
+				33.1924769
+			]
+		}
+	},
+	{
+		"totalWeight" : 9.95,
+		"weightLog" : [
+			{
+				"weight" : 9.95,
+				"date" : ISODate("2014-08-31T17:59:04.110Z"),
+				"_id" : ObjectId("540362682c48f3e96786fa82")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.1298202,
+				33.2147762
+			]
+		}
+	},
+	{
+		"totalWeight" : 5.15,
+		"weightLog" : [
+			{
+				"weight" : 5.15,
+				"date" : ISODate("2014-08-31T17:02:30.889Z"),
+				"_id" : ObjectId("540355262c48f3e96786fa7d")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.141947,
+				33.207018
+			]
+		}
+	},
+	{
+		"totalWeight" : 0,
+		"weightLog" : [ ],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.15714799999999,
+				33.2129199
+			]
+		}
+	},
+	{
+		"totalWeight" : 4.25,
+		"weightLog" : [
+			{
+				"weight" : 4.25,
+				"date" : ISODate("2014-08-31T17:26:57.784Z"),
+				"_id" : ObjectId("54035ae12c48f3e96786fa7f")
+			}
+		],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.13215480000001,
+				33.2110738
+			]
+		}
+	},
+	{
+		"totalWeight" : 0,
+		"weightLog" : [ ],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.143823,
+				33.218652
+			]
+		}
+	},
+	{
+		"totalWeight" : 0,
+		"weightLog" : [ ],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.143874,
+				33.2528689
+			]
+		}
+	},
+	{
+		"totalWeight" : 0,
+		"weightLog" : [ ],
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [
+				-97.09420899999999,
+				33.16005
+			]
+		}
+	}
+]
