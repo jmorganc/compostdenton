@@ -36,39 +36,12 @@
                     },
                     geometry: {
                         type: 'Point',
+                        // Can perhaps fudge the exact location in this way?
                         //coordinates: [-97.746014 + Math.random() * 2, 32.052802 + Math.random() * 2]
                         coordinates: json_data[i]['geometry']['coordinates']
                     }
                 });
-                // for (var key in json_data[i]) {
-                //     alert(key)
-                // }
             }
-
-            // GeoJSON data: see http://geojson.org/ for the full description of this format.
-            //
-            // In these lines, we create some random points. This, of course, you can change:
-            // instead, your data can be hardcoded as a Javascript object, or pulled in
-            // from an external file with AJAX, or loaded from Mapbox automatically.
-            // var geoJsonData = {
-            //     type: "FeatureCollection",
-            //     features: []
-            // };
-            // for (var i = 0; i < 30; i++) {
-            //     geoJsonData.features.push({
-            //         type: 'Feature',
-            //         properties: {
-            //             // The important part is here: that each feature has some property
-            //             // that we refer to later on, in `pointToLayer`, that determines
-            //             // the size of the scaled circle.
-            //             count: Math.random() * 20
-            //         },
-            //         geometry: {
-            //             type: 'Point',
-            //             coordinates: [-97.746014 + Math.random() * 2, 32.052802 + Math.random() * 2]
-            //         }
-            //     });
-            // }
 
             var geoJson = L.geoJson(geoJsonData, {
                 pointToLayer: function(feature, latlng) {
