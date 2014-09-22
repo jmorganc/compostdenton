@@ -13,7 +13,10 @@
         <div id='map'></div>
 
         <script>
-            var map = L.mapbox.map('map', 'obrit.f5bd7c3c')
+            var map = L.mapbox.map('map', 'obrit.f5bd7c3c', {
+                maxZoom: 15,
+                minZoom: 12
+            })
                 .setView([33.2191, -97.1373], 12);
 
             <?php
@@ -54,6 +57,7 @@
                     })
                 }
             }).addTo(map);
+
 
 
             // TEST GRIDLAYER STUFF
