@@ -48,8 +48,8 @@
 
             var minCount_A = 0;
             var maxCount_B = 0;
-            var sizeMin_a = 10;
-            var sizeMax_b = 25;
+            var sizeMin_a = 0;
+            var sizeMax_b = 35;
             for (var i = 0; i < json_data.length; i++) {
                 var totalWeight = json_data[i]['totalWeight'];
                 if (totalWeight > maxCount_B) {
