@@ -1,17 +1,23 @@
 html {
     padding: 0px;
     margin: 0px;
+    height: 100%;
 }
 
 body {
     padding: 10px 20px;
     margin: 0px;
+    height: 100%;
+}
+
+div.container {
+    height: 100%;
 }
 
 div#map {
     padding: 0px;
     margin: 0px;
     /*height: 800px;*/
-    height: 800px;
+    height: 100%;
     border: 1px solid #555;
 }

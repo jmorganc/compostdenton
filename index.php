@@ -15,25 +15,28 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Compost Denton</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id='map'></div>
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <h1>Compost Denton</h1>
+                </div>
+            </div> -->
+            <div class="row" style="height: 100%;">
+                <div style="height: 100%;">
+                    <div id='map'>&nbsp;</div>
+                </div>
             </div>
         </div>
 
         <script>
             var map = L.mapbox.map('map', 'obrit.f5bd7c3c', {
                 maxZoom: 13,
-                minZoom: 12
+                minZoom: 11
             })
-                .setView([33.2191, -97.1373], 12);
+                .setView([33.2191, -97.1373], 11);
 
             <?php
+            //@TODO: Legend/scale
             $json_string = file_get_contents("https://compostdenton.com/weight");
             //$json_string = str_replace('ISODate', 'Date', $json_string);
             //$json_string = preg_replace('/(ObjectId\()("[0-9A-Za-z]*")(\))/', '$2', $json_string);
@@ -91,6 +94,8 @@
                         // too small or too large, we can use basic math in Javascript to
                         // adjust it so that it fits the map better.
                         radius: feature.properties.scaledWeight,
+                        color: '#4F6F2D',
+                        clickable: false
                     })
                         //.bindPopup('Count: ' + feature.properties.count)
                 }
