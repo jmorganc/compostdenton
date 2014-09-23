@@ -74,9 +74,10 @@
                         type: 'Point',
                         // Can perhaps fudge the exact location in this way?
                         //coordinates: [-97.746014 + Math.random() * 2, 32.052802 + Math.random() * 2]
-                        coordinates: json_data[i]['geometry']['coordinates']
+                        coordinates: [json_data[i]['geometry']['coordinates'][0] + Math.random() / 500, json_data[i]['geometry']['coordinates'][1] + Math.random() / 500]
                     }
                 });
+                //console.log(Math.random() / 1000);
                 //console.log(geoJsonData.features[i].geometry.coordinates);
                 //console.log(geoJsonData.features[i].properties.count);
                 //console.log(geoJsonData.features[i].properties.scaledWeight);
