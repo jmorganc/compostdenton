@@ -5,16 +5,30 @@
         <title>Compost Denton Map</title>
         <link rel="stylesheet" href="screen.css" />
         <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!-- MapBox -->
         <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Compost Denton</h1>
-        <div id='map'></div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Compost Denton</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id='map'></div>
+            </div>
+        </div>
 
         <script>
             var map = L.mapbox.map('map', 'obrit.f5bd7c3c', {
-                maxZoom: 15,
+                maxZoom: 13,
                 minZoom: 12
             })
                 .setView([33.2191, -97.1373], 12);
@@ -32,11 +46,29 @@
                 features: []
             };
 
+            var minCount_A = 0;
+            var maxCount_B = 0;
+            var sizeMin_a = 10;
+            var sizeMax_b = 25;
             for (var i = 0; i < json_data.length; i++) {
+                var totalWeight = json_data[i]['totalWeight'];
+                if (totalWeight > maxCount_B) {
+                    maxCount_B = totalWeight;
+                }
+                if (totalWeight < minCount_A) {
+                    minCount_A = totalWeight;
+                }
+                //a + (x - A)(b - a) / (B - A)
+                var scaledWeight = Math.round(sizeMin_a + (((totalWeight - minCount_A) * (sizeMax_b - sizeMin_a)) / (maxCount_B - minCount_A)));
+                if (scaledWeight < 0) {
+                    scaledWeight = 0;
+                }
+
                 geoJsonData.features.push({
                     type: 'Feature',
                     properties: {
-                        count: json_data[i]['totalWeight']
+                        count: totalWeight,
+                        scaledWeight: scaledWeight
                     },
                     geometry: {
                         type: 'Point',
@@ -47,6 +79,8 @@
                 });
                 //console.log(geoJsonData.features[i].geometry.coordinates);
                 //console.log(geoJsonData.features[i].properties.count);
+                //console.log(geoJsonData.features[i].properties.scaledWeight);
+
             }
 
             var geoJson = L.geoJson(geoJsonData, {
@@ -55,8 +89,9 @@
                         // Here we use the `count` property in GeoJSON verbatim: if it's
                         // too small or too large, we can use basic math in Javascript to
                         // adjust it so that it fits the map better.
-                        radius: feature.properties.count,
-                    }).bindPopup('Count: ' + feature.properties.count)
+                        radius: feature.properties.scaledWeight,
+                    })
+                        //.bindPopup('Count: ' + feature.properties.count)
                 }
             }).addTo(map);
             //console.log(geoJson);

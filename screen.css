@@ -11,6 +11,7 @@ body {
 div#map {
     padding: 0px;
     margin: 0px;
+    /*height: 800px;*/
     height: 800px;
     border: 1px solid #555;
 }
