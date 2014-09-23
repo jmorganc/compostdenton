@@ -45,18 +45,21 @@
                         coordinates: json_data[i]['geometry']['coordinates']
                     }
                 });
+                //console.log(geoJsonData.features[i].geometry.coordinates);
+                //console.log(geoJsonData.features[i].properties.count);
             }
 
             var geoJson = L.geoJson(geoJsonData, {
                 pointToLayer: function(feature, latlng) {
                     return L.circleMarker(latlng, {
                         // Here we use the `count` property in GeoJSON verbatim: if it's
-                        // to small or two large, we can use basic math in Javascript to
+                        // too small or too large, we can use basic math in Javascript to
                         // adjust it so that it fits the map better.
-                        //radius: feature.properties.count
-                    })
+                        radius: feature.properties.count,
+                    }).bindPopup('Count: ' + feature.properties.count)
                 }
             }).addTo(map);
+            //console.log(geoJson);
 
 
 
