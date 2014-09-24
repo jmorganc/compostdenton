@@ -21,40 +21,40 @@
                     <h1>Compost Denton</h1>
                 </div>
             </div> -->
-            <div id="scale" class="row">
-                <div class="col-md-2">
-                    Scale
-                </div>
-                <div id="scale2" class="col-md-2">
-                    <div class="col-md-4 pagination-centered vmiddle">< <span class="min"></span></div>
-                    <div class="col-md-8 pagination-centered vmiddle"><div class="circle"></div></div>
-                </div>
-                <div id="scale3" class="col-md-2">
-                    Min: <span class="min"></span>
-                    Max: <span class="max"></span><br/>
-                    <div class="circle" style="width: 18px; height: 18px; border-radius: 9px; -moz-border-radius: 9px; -webkit-border-radius: 9px;"></div>
-                </div>
-                <div id="scale4" class="col-md-2">
-                    Min: <span class="min"></span>
-                    Max: <span class="max"></span>
-                    <br/>
-                    <div class="circle" style="width: 32px; height: 32px; border-radius: 16px; -moz-border-radius: 16px; -webkit-border-radius: 16px;"></div>
-                </div>
-                <div id="scale5" class="col-md-2">
-                    Min: <span class="min"></span>
-                    Max: <span class="max"></span>
-                    <br/>
-                    <div class="circle" style="width: 50px; height: 50px; border-radius: 25px; -moz-border-radius: 25px; -webkit-border-radius: 25px;"></div>
-                </div>
-                <div id="scale6" class="col-md-2">
-                    > <span class="max"></span><br/>
-                    <div class="circle" style="width: 72px; height: 72px; border-radius: 36px; -moz-border-radius: 36px; -webkit-border-radius: 36px;"></div>
-                </div>
-            </div>
+
             <br/>
+
             <div class="row" style="height: 90%;">
                 <div class="col-md-12" style="height: 100%;">
                     <div id='map'>&nbsp;</div>
+                </div>
+            </div>
+
+            <br/>
+
+            <div id="scale" class="row scale">
+                <div class="col-md-2 text-center">
+                    <h1 style="margin-top: 0px;">Compost Denton</h1>
+                </div>
+                <div id="scale2" class="col-md-2 text-center scale">
+                    <div class="circle"></div>
+                    &lt; <span class="min"></span> lbs
+                </div>
+                <div id="scale3" class="col-md-2 text-center scale">
+                    <div class="circle"></div>
+                    <span class="min"></span> - <span class="max"></span> lbs
+                </div>
+                <div id="scale4" class="col-md-2 text-center scale">
+                    <div class="circle"></div>
+                    <span class="min"></span> - <span class="max"></span> lbs
+                </div>
+                <div id="scale5" class="col-md-2 text-center scale">
+                    <div class="circle"></div>
+                    <span class="min"></span> - <span class="max"></span> lbs
+                </div>
+                <div id="scale6" class="col-md-2 text-center scale">
+                    <div class="circle"></div>
+                    &gt; <span class="max"></span> lbs
                 </div>
             </div>
         </div>
