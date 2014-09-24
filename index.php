@@ -41,11 +41,11 @@
                 <div class="col-md-2 text-center scale">
                     <h1 style="margin-top: 0px;">Compost Denton</h1>
                 </div>
-                <div id="scale2" class="col-md-2 text-center scale">
+                <div id="scale6" class="col-md-2 text-center scale">
                     <div class="circle"></div>
-                    &lt; <span class="min"></span> lbs
+                    &gt; <span class="max"></span> lbs
                 </div>
-                <div id="scale3" class="col-md-2 text-center scale">
+                <div id="scale5" class="col-md-2 text-center scale">
                     <div class="circle"></div>
                     <span class="min"></span> - <span class="max"></span> lbs
                 </div>
@@ -53,13 +53,13 @@
                     <div class="circle"></div>
                     <span class="min"></span> - <span class="max"></span> lbs
                 </div>
-                <div id="scale5" class="col-md-2 text-center scale">
+                <div id="scale3" class="col-md-2 text-center scale">
                     <div class="circle"></div>
                     <span class="min"></span> - <span class="max"></span> lbs
                 </div>
-                <div id="scale6" class="col-md-2 text-center scale">
+                <div id="scale2" class="col-md-2 text-center scale">
                     <div class="circle"></div>
-                    &gt; <span class="max"></span> lbs
+                    &lt; <span class="min"></span> lbs
                 </div>
             </div>
         </div>
