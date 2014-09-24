@@ -21,14 +21,6 @@
     </head>
     <body>
         <div class="container">
-            <!-- <div class="row">
-                <div class="col-md-12">
-                    <h1>Compost Denton</h1>
-                </div>
-            </div> -->
-
-            <br/>
-
             <div class="row" style="height: 90%;">
                 <div class="col-md-12" style="height: 100%;">
                     <div id='map'>&nbsp;</div>
