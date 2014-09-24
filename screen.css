@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+    /*color: #4F6F2D !important;*/
     color: #4F6F2D !important;
 }
 
@@ -32,15 +33,11 @@ div#scale {
 
 div.scale {
     padding: 0px 0px 10px 0px;
+    vertical-align: middle;
 }
 
 div.circle {
     margin: 0px auto;
-    /*background-color: #4F6F2D*/;
-    background-color: #809868;
-}
-
-div.vmiddle {
-    vertical-align: middle;
-    height: 100px;
+    background-color: #4F6F2D;
+    /*background-color: #809868;*/
 }
