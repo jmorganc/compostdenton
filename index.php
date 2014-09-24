@@ -136,7 +136,7 @@
                 if (i == 2) { j++; }
                 if (i == 6) { j--; }
                 $('div#scale' + i + ' span.min').text(Math.floor(minmax[j][0]));
-                $('div#scale' + i + ' span.max').text(Math.ceil(minmax[j][1]));
+                $('div#scale' + i + ' span.max').text(Math.ceil(minmax[j+1][0]-1));
                 //style="width: 72px; height: 72px; border-radius: 36px; -moz-border-radius: 36px; -webkit-border-radius: 36px;"
                 var radius = Math.pow(i, 2);
                 var diameter = radius * 2;
