@@ -22,6 +22,18 @@ div#map {
     border: 1px solid #4F6F2D;
 }
 
+div#scale {
+    /*height: 150px;*/
+}
+
 div.circle {
-    background-color: #4F6F2D;
+    /*background-color: #4F6F2D*/;
+    background-color: #809868;
+}
+
+div.vmiddle {
+    display: block;
+    vertical-align: middle;
+    border: 1px solid red;
+    height: 100%;
 }

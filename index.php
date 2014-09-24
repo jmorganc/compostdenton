@@ -21,13 +21,13 @@
                     <h1>Compost Denton</h1>
                 </div>
             </div> -->
-            <div class="row">
+            <div id="scale" class="row">
                 <div class="col-md-2">
                     Scale
                 </div>
                 <div id="scale2" class="col-md-2">
-                    < <span class="min"></span><br/>
-                    <div class="circle" style="width: 8px; height: 8px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;"></div>
+                    <div class="col-md-4 pagination-centered vmiddle">< <span class="min"></span></div>
+                    <div class="col-md-8 pagination-centered vmiddle"><div class="circle"></div></div>
                 </div>
                 <div id="scale3" class="col-md-2">
                     Min: <span class="min"></span>
@@ -51,15 +51,17 @@
                     <div class="circle" style="width: 72px; height: 72px; border-radius: 36px; -moz-border-radius: 36px; -webkit-border-radius: 36px;"></div>
                 </div>
             </div>
-            <div class="row" style="height: 100%;">
+            <br/>
+            <div class="row" style="height: 90%;">
                 <div class="col-md-12" style="height: 100%;">
                     <div id='map'>&nbsp;</div>
                 </div>
             </div>
         </div>
+        <br/>
 
         <script>
-            var map = L.mapbox.map('map', 'obrit.f5bd7c3c', {
+            var map = L.mapbox.map('map', 'obrit.j3l6pe74', {
                 maxZoom: 13,
                 minZoom: 11
             })
@@ -122,10 +124,9 @@
                 });
                 //console.log(Math.random() / 1000);
                 //console.log(geoJsonData.features[i].geometry.coordinates);
-                console.log('count: ' + geoJsonData.features[i].properties.count);
-                console.log('scale: ' + geoJsonData.features[i].properties.scaled);
-                console.log('\n');
-
+                // console.log('count: ' + geoJsonData.features[i].properties.count);
+                // console.log('scale: ' + geoJsonData.features[i].properties.scaled);
+                // console.log('\n');
             }
             console.log(minmax);
             for (var i = 2; i < minmax.length; i++) {
@@ -136,6 +137,14 @@
                 if (i == 6) { j--; }
                 $('div#scale' + i + ' span.min').text(Math.floor(minmax[j][0]));
                 $('div#scale' + i + ' span.max').text(Math.ceil(minmax[j][1]));
+                //style="width: 72px; height: 72px; border-radius: 36px; -moz-border-radius: 36px; -webkit-border-radius: 36px;"
+                var radius = Math.pow(i, 2);
+                var diameter = radius * 2;
+                $('div#scale' + i + ' div.circle').css('width', diameter + 'px');
+                $('div#scale' + i + ' div.circle').css('height', diameter + 'px');
+                $('div#scale' + i + ' div.circle').css('border-radius', radius + 'px');
+                $('div#scale' + i + ' div.circle').css('-moz-border-radius', radius + 'px');
+                $('div#scale' + i + ' div.circle').css('-webkit-border-radius', radius + 'px');
             }
 
             var geoJson = L.geoJson(geoJsonData, {
