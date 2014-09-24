@@ -31,13 +31,20 @@ div#scale {
     /*height: 150px;*/
 }
 
+div.table {
+    display: table;
+}
+
 div.scale {
     padding: 0px 0px 10px 0px;
     vertical-align: middle;
+    display: table-cell;
+    float: none;
 }
 
 div.circle {
     margin: 0px auto;
     background-color: #4F6F2D;
+    border-radius: 50%;
     /*background-color: #809868;*/
 }

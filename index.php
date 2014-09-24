@@ -32,8 +32,8 @@
 
             <br/>
 
-            <div id="scale" class="row scale">
-                <div class="col-md-2 text-center">
+            <div id="scale" class="row table">
+                <div class="col-md-2 text-center scale">
                     <h1 style="margin-top: 0px;">Compost Denton</h1>
                 </div>
                 <div id="scale2" class="col-md-2 text-center scale">
@@ -142,9 +142,9 @@
                 var diameter = radius * 2;
                 $('div#scale' + i + ' div.circle').css('width', diameter + 'px');
                 $('div#scale' + i + ' div.circle').css('height', diameter + 'px');
-                $('div#scale' + i + ' div.circle').css('border-radius', radius + 'px');
-                $('div#scale' + i + ' div.circle').css('-moz-border-radius', radius + 'px');
-                $('div#scale' + i + ' div.circle').css('-webkit-border-radius', radius + 'px');
+                // $('div#scale' + i + ' div.circle').css('border-radius', radius + 'px');
+                // $('div#scale' + i + ' div.circle').css('-moz-border-radius', radius + 'px');
+                // $('div#scale' + i + ' div.circle').css('-webkit-border-radius', radius + 'px');
             }
 
             var geoJson = L.geoJson(geoJsonData, {
