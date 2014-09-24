@@ -21,8 +21,38 @@
                     <h1>Compost Denton</h1>
                 </div>
             </div> -->
+            <div class="row">
+                <div class="col-md-2">
+                    Scale
+                </div>
+                <div id="scale2" class="col-md-2">
+                    < <span class="min"></span><br/>
+                    <div class="circle" style="width: 8px; height: 8px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;"></div>
+                </div>
+                <div id="scale3" class="col-md-2">
+                    Min: <span class="min"></span>
+                    Max: <span class="max"></span><br/>
+                    <div class="circle" style="width: 18px; height: 18px; border-radius: 9px; -moz-border-radius: 9px; -webkit-border-radius: 9px;"></div>
+                </div>
+                <div id="scale4" class="col-md-2">
+                    Min: <span class="min"></span>
+                    Max: <span class="max"></span>
+                    <br/>
+                    <div class="circle" style="width: 32px; height: 32px; border-radius: 16px; -moz-border-radius: 16px; -webkit-border-radius: 16px;"></div>
+                </div>
+                <div id="scale5" class="col-md-2">
+                    Min: <span class="min"></span>
+                    Max: <span class="max"></span>
+                    <br/>
+                    <div class="circle" style="width: 50px; height: 50px; border-radius: 25px; -moz-border-radius: 25px; -webkit-border-radius: 25px;"></div>
+                </div>
+                <div id="scale6" class="col-md-2">
+                    > <span class="max"></span><br/>
+                    <div class="circle" style="width: 72px; height: 72px; border-radius: 36px; -moz-border-radius: 36px; -webkit-border-radius: 36px;"></div>
+                </div>
+            </div>
             <div class="row" style="height: 100%;">
-                <div style="height: 100%;">
+                <div class="col-md-12" style="height: 100%;">
                     <div id='map'>&nbsp;</div>
                 </div>
             </div>
@@ -49,29 +79,39 @@
                 features: []
             };
 
-            var minCount_A = 0;
+            var minCount_A = 1000000000;
             var maxCount_B = 0;
-            var sizeMin_a = 0;
-            var sizeMax_b = 35;
+            var sizeMin_a = 2;
+            var sizeMax_b = 6;
             for (var i = 0; i < json_data.length; i++) {
                 var totalWeight = json_data[i]['totalWeight'];
+                if (totalWeight <= 0) {
+                    continue;
+                }
                 if (totalWeight > maxCount_B) {
                     maxCount_B = totalWeight;
                 }
                 if (totalWeight < minCount_A) {
                     minCount_A = totalWeight;
                 }
+            }
+
+            var minmax = [[], [], [1000000000, 0], [1000000000, 0], [1000000000, 0], [1000000000, 0], [1000000000, 0]];
+            for (var i = 0; i < json_data.length; i++) {
                 //a + (x - A)(b - a) / (B - A)
-                var scaledWeight = Math.round(sizeMin_a + (((totalWeight - minCount_A) * (sizeMax_b - sizeMin_a)) / (maxCount_B - minCount_A)));
-                if (scaledWeight < 0) {
-                    scaledWeight = 0;
+                var totalWeight = json_data[i]['totalWeight'];
+                if (totalWeight <= 0) {
+                    continue;
                 }
+                var scaledWeight = Math.round(sizeMin_a + (((totalWeight - minCount_A) * (sizeMax_b - sizeMin_a)) / (maxCount_B - minCount_A)));
+                if (totalWeight > minmax[scaledWeight][1]) { minmax[scaledWeight][1] = totalWeight; }
+                if (totalWeight < minmax[scaledWeight][0]) { minmax[scaledWeight][0] = totalWeight; }
 
                 geoJsonData.features.push({
                     type: 'Feature',
                     properties: {
                         count: totalWeight,
-                        scaledWeight: scaledWeight
+                        scaled: scaledWeight
                     },
                     geometry: {
                         type: 'Point',
@@ -82,9 +122,20 @@
                 });
                 //console.log(Math.random() / 1000);
                 //console.log(geoJsonData.features[i].geometry.coordinates);
-                //console.log(geoJsonData.features[i].properties.count);
-                //console.log(geoJsonData.features[i].properties.scaledWeight);
+                console.log('count: ' + geoJsonData.features[i].properties.count);
+                console.log('scale: ' + geoJsonData.features[i].properties.scaled);
+                console.log('\n');
 
+            }
+            console.log(minmax);
+            for (var i = 2; i < minmax.length; i++) {
+                //$('div#scale' + i + ' span.min').text(minmax[i][0]);
+                //$('div#scale' + i + ' span.max').text(minmax[i][1]);
+                var j = i;
+                if (i == 2) { j++; }
+                if (i == 6) { j--; }
+                $('div#scale' + i + ' span.min').text(Math.floor(minmax[j][0]));
+                $('div#scale' + i + ' span.max').text(Math.ceil(minmax[j][1]));
             }
 
             var geoJson = L.geoJson(geoJsonData, {
@@ -93,7 +144,8 @@
                         // Here we use the `count` property in GeoJSON verbatim: if it's
                         // too small or too large, we can use basic math in Javascript to
                         // adjust it so that it fits the map better.
-                        radius: feature.properties.scaledWeight,
+                        radius: Math.pow(feature.properties.scaled, 2),
+                        //radius: feature.properties.scaled,
                         color: '#4F6F2D',
                         clickable: false
                     })
@@ -101,29 +153,6 @@
                 }
             }).addTo(map);
             //console.log(geoJson);
-
-
-
-            // TEST GRIDLAYER STUFF
-            // L.mapbox.accessToken = 'pk.eyJ1Ijoib2JyaXQiLCJhIjoiMlRUQ0hxQSJ9.--yh59XkySo_ce2g6B7b3g';
-            // // Define a map without a Map ID so we
-            // // have to add each part of it manually.
-            // var map = L.mapbox.map('map', undefined, {
-            //     infoControl: true,
-            //     attributionControl: false
-            // });
-
-            // // The visible tile layer
-            // L.mapbox.tileLayer('obrit.f5bd7c3c').addTo(map);
-
-            // // Load interactivity data into the map with a gridLayer
-            // var myGridLayer = L.mapbox.gridLayer('obrit.f5bd7c3c').addTo(map);
-
-            // // And use that interactivity to drive a control the user can see.
-            // var myGridControl = L.mapbox.gridControl(myGridLayer).addTo(map);
-
-            // // Finally, center the map.
-            // map.setView([33.2191, -97.1373], 13);
         </script>
     </body>
 </html>

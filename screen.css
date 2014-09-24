@@ -8,6 +8,7 @@ body {
     padding: 10px 20px;
     margin: 0px;
     height: 100%;
+    background-color: #fff;
 }
 
 div.container {
@@ -17,7 +18,10 @@ div.container {
 div#map {
     padding: 0px;
     margin: 0px;
-    /*height: 800px;*/
     height: 100%;
-    border: 1px solid #555;
+    border: 1px solid #4F6F2D;
+}
+
+div.circle {
+    background-color: #4F6F2D;
 }
